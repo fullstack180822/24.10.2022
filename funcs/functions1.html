@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>functions</title>
+</head>
+
+<body>
+    <hr>
+    <button onclick="foo()">click</button>
+    <div id="result" ></div>
+    <script>
+
+        //const foo = () => {  }
+        
+        function foo() {
+            document.getElementById('result').innerHTML += 'function foo says hello'
+        }
+
+        const x = 2
+        const y = 4
+
+        function div(a, b) {
+            if (b == 0) {
+                return NaN
+            }
+            return a / b
+        }
+
+        function add(x, y) {
+            x++
+            y++
+            //multiply(x, y)            
+            console.log(x + y)
+        }
+
+        function multiply_args(x, y) {
+            let x = arguments[0]
+            let y = arguments[1]
+            // use this in very rare scenarios
+        }
+
+        function multiply(x = 1, y = 3) {
+            x++
+            y++
+            console.log(x * y)
+        }        
+        
+        add(x, y)
+        multiply(x=3)
+        multiply(5, 9)
+        console.log(x)
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
