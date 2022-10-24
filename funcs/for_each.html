@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>functions</title>
+</head>
+
+<body>
+    <hr>
+    <button onclick="foo()">click</button>
+    <div id="result" ></div>
+    <script>
+        // print
+        function print(msg) { 
+            document.getElementById('result').innerHTML += `${msg} <br />`
+        }
+
+        a = [1,4,7,9,8,7,10];
+
+        a.forEach(print);
+        // same as:
+        // for (let e in a) {
+        //     print(e)
+        // }
+
+        let sum = 0;
+        function my_sum(e) {
+            sum += e
+        }
+        a.forEach(my_sum)
+        // same as:
+        // for (let e in a) {
+        //     my_sum(e)
+        // }        
+        print(`sum = ${sum}`)
+
+        function foo1(f) {
+            f('hello')
+        }
+        foo1(console.log)
+
+        // function my_sum(e) {
+        //     sum += e
+        // }
+        // anonymous -- *** bonus - will learn later
+        //a.forEach(e => {sum += e})
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>

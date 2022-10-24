@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>functions</title>
+</head>
+
+<body>
+    <hr>
+    <button onclick="foo()">click</button>
+    <div id="result" ></div>
+    <script>
+        // print
+        function print(msg) { 
+            document.getElementById('result').innerHTML += msg + '<br />'
+        }
+        // create a function which gets 2 numbers and return their sum
+        function get_sum(a = 0, b = 0) {
+            return a + b
+        }
+
+        // create a function which gets 2 numbers and return their difference
+        function get_diff(a, b) {
+            return a - b;
+        }
+        // create a function which gets 2 numbers and return their difference. default value = 0
+        function get_diff_default0(a = 0, b = 0) {
+            return a - b;
+        }        
+        // create a function which gets 2 numbers and return their average
+        function get_diff_default0(a, b) {
+            return (a + b) / 2;
+        }        
+        // Write a function that receives two parameters of type int.      
+        //      If the first parameter is bigger than the second parameter -> the function should
+        //      returns the first parameter
+        //      else -> the function should return the second parameter        
+        function get_max(a, b) {
+            if (a > b) {
+                return a;
+            }
+            else {
+                return b;
+            }
+        }        
+        function get_max_better(a, b) {
+            return a > b ? a : b;
+        }        
+        // *bonus: create a function which gets a parameter of type list (of numbers) 
+        //         and return their average
+        function get_avg_of_list(a) {
+            // a is a list i.e. [1,2,3,4,5]
+            let sum = 0
+            for (let i = 0; i < a.length; i++) {
+                sum += a[i]
+            }
+            return sum / a.length
+        }                
+        // *bonus: create a function which gets first parameter as a list (of numbers)
+        //         second parameter as a number (default is zero)
+        //         the function will return true if the numbers exists inside the list
+        //         otherwise will print false
+        //         -implement and call it twice (true/false)
+        function find_item_ragil(a, item = 0) {
+            // ragil
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] == item) {
+                    return true;
+                }
+            }            
+            return false;
+        }
+        function find_item_of(a, item = 0) {
+            // for(let i = 0; i < a.length; i++) { //
+            //     e = a[i];                       // for (let e of a) {
+            //     // ..........
+            // }
+            // for-each
+            for (let e of a) {
+                if (e == item) {
+                    return true;
+                }
+            }            
+            return false;
+        }
+        function find_item_in(a, item = 0) {
+            // for-each
+            for (let i in a) {
+                if (a[i] == item) {
+                    return true;
+                }
+            }            
+            return false;
+        }
+
+
+        const num1 = parseInt(prompt('enter number: '))
+        const num2 = parseInt(prompt('enter number: '))
+        const sum1 = get_sum(num1, num2)
+        print(`${num1} + ${num2} = ${sum1}`)
+        print(get_sum(1, 3))
+        var z = 2;
+        get_sum(z, z)
+
+        
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
