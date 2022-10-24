@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>functions</title>
+</head>
+
+<body>
+    <hr>
+    <button onclick="foo()">click</button>
+    <div id="result" ></div>
+    <script>
+        // print
+        function print(msg) { 
+            document.getElementById('result').innerHTML += msg
+        }
+        // create a function which gets 2 numbers and return their sum
+        function get_sum(a = 0, b = 0) {
+            return a + b
+        }
+
+        function foo(a) { 
+
+        }
+        foo([1,2,3])
+        // create a function which gets 2 numbers and return their difference
+        // create a function which gets 2 numbers and return their difference. default value = 0
+        // create a function which gets 2 numbers and return their average
+        // *bonus: create a function which gets a parameter of type list (of numbers) 
+        //         and return their average
+        const num1 = parseInt(prompt('enter number: '))
+        const num2 = parseInt(prompt('enter number: '))
+        const sum1 = get_sum(num1, num2)
+        print(`${num1} + ${num2} = ${sum1}`)
+        print(get_sum(1, 3))
+        var z = 2;
+        get_sum(z, z)
+
+        
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
